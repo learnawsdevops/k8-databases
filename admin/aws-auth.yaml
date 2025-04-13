@@ -8,13 +8,13 @@ data:
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
     - groups:
-      # - pod-reader
-      # - service-reader
+      # - pod-reader these are not mandatory to mention here if you create role and rolebindings they can automatically gets used to it
+      # - service-reader  mentioning user is mandatory
       # - secret-reader
-      userarn: arn:aws:iam::490004616197:user/bhavana
+      userarn: arn:aws:iam::490004616197:user/bhavana  
       username: bhavana
 kind: ConfigMap
 metadata:
   name: aws-auth
   namespace: kube-system
-  uid: 11571167-16ab-4e12-823c-d60cf749481c
+  uid: 11571167-16ab-4e12-823c-d60cf749481c # this should be need to get from our original eks cluster
