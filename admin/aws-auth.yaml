@@ -8,9 +8,9 @@ data:
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
     - groups:
-      - pod-reader
-      - service-reader
-      - secret-reader
+      # - pod-reader
+      # - service-reader
+      # - secret-reader
       userarn: arn:aws:iam::490004616197:user/bhavana
       username: bhavana
 kind: ConfigMap
