@@ -7,12 +7,13 @@ data:
       rolearn: arn:aws:iam::315069654700:role/eksctl-roboshop-cluster-nodegroup--NodeInstanceRole-yZS3T6m0Z2Am
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
-    - groups:
+    - userarn: arn:aws:iam::490004616197:user/bhavana  
+      username: bhavana
+      groups:
       # - pod-reader these are not mandatory to mention here if you create role and rolebindings they can automatically gets used to it
       # - service-reader  mentioning user is mandatory
       # - secret-reader
-      userarn: arn:aws:iam::490004616197:user/bhavana  
-      username: bhavana
+      
 kind: ConfigMap
 metadata:
   name: aws-auth
