@@ -9,6 +9,7 @@ data:
   mapUsers: |
     - groups:
       - pod-reader
+      - service-reader
       userarn: arn:aws:iam::490004616197:user/bhavana
       username: bhavana
 kind: ConfigMap
