@@ -30,5 +30,5 @@ spec:
           requests:
             cpu: 25m
         envFrom:
-          - configMapRef:
-              name: backend
+        - configMapRef:
+            name: backend
