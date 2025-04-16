@@ -4,4 +4,4 @@ metadata:
   name: backend
   namespace: roboshop
 data:
-  DB_HOST: ""
+  DB_HOST: "mysql"
