@@ -22,8 +22,8 @@ spec:
       - name: mysql
         image: "hitesh2201/mysql:{{ .Values.statefulset.imageVersion}}"
         envFrom:
-          - secretRef:
-              name: mysql
+        - secretRef:
+            name: mysql
         volumeMounts:
         - name: mysql
           mountPath: /var/lib/mysql
