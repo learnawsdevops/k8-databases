@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: "backend:{{ .Values.deployment.imageVersion}}"
+        image: "hitesh2201/backend:{{ .Values.deployment.imageVersion}}"
         resources:
           limits:
             cpu: 50m
