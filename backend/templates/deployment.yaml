@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: backend
+    project: roboshop
+    tier: app
+spec:
+  replicas: {{ .Values.deployment.replicas}}
+  selector:
+    matchLabels:
+      app: backend
+      project: roboshop
+      tier: app
+  template:
+    metadata:
+      labels:
+        app: backend
+        project: roboshop
+        tier: app
+    spec:
+      containers:
+      - name: backend
+        image: "backend:{{ .Values.deployment.imageVersion}}"
+        resources:
+          limits:
+            cpu: 50m
+          requests:
+            cpu: 25m
+        envFrom:
+          - configMapRef:
+              name: backend
