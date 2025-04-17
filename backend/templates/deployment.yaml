@@ -26,9 +26,9 @@ spec:
         image: "hitesh2201/backend:{{ .Values.deployment.imageVersion}}"
         resources:
           limits:
-            cpu: 50m
+            cpu: 150m
           requests:
-            cpu: 25m
+            cpu: 125m
         envFrom:
         - configMapRef:
             name: backend
