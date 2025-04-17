@@ -36,11 +36,11 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-  - host: "hiteshshop.store"
+  - host: "pod.hiteshshop.store"
     http:
       paths:
       - pathType: Prefix
-        path: "/index.html"
+        path: ""
         backend:
           service:
             name: pod-service
