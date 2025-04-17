@@ -39,6 +39,7 @@ metadata:
   name: web
   namespace: roboshop
 spec:
+  # type: LoadBalancer if ur using ingress dont mention this...
   selector:
     name: web
     project: roboshop
