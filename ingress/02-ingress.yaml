@@ -40,7 +40,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/pod"
+        path: "/index"
         backend:
           service:
             name: pod-service
