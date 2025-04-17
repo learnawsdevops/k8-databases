@@ -3,12 +3,12 @@ kind: Ingress
 metadata:
   name: web
   annotations:
-    kubernetes.io/ingress.class: "alb"
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/tags: Environment=dev,Team=test,Project=Roboshop
     alb.ingress.kubernetes.io/group.name: roboshop
 spec:
+  ingressClassName: alb
   rules:
   - host: "hiteshshop.store"
     http:
